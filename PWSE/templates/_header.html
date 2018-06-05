@@ -24,17 +24,125 @@
         </form>
         <ul class="nav navbar-nav navbar-right">
           <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">团队 <span class="caret"></span></a>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">团队<span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <li><a href="#">项目背景</a></li>
-              <li><a href="#">团队简介</a></li>
-              <li><a href="#">加入我们</a></li>
+              <li><a href="#" data-toggle="modal" data-target="#background">项目背景</a></li>
+              <li><a href="#" data-toggle="modal" data-target="#team">团队简介</a></li>
+              <li><a href="#" data-toggle="modal" data-target="#join">加入我们</a></li>
               <li role="separator" class="divider"></li>
-              <li><a href="#">建议</a></li>
+              <li><a href="#" data-toggle="modal" data-target="#suggest">建议</a></li>
             </ul>
           </li>
         </ul>
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
   </nav>
+  <div class="modal fade" id="background" tabindex="-1" role="dialog" aria-labelledby="backgroundTitle" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="backgroundTitle" style="font-size: 24px">
+            PWSE 项目背景
+          </h4>
+        </div>
+        <div class="modal-body" style="font-size: 18px; padding:40px">
+          PWSE, 即Public Welfare Search Engine（智能补助金查询系统）。该系统旨在为广大需要获取各类补助金的人群提供方便、快捷地了解适合自己的补助金来源的途径。
+          在互联网时代，这种需求可以通过网页技术来实现，为全中国的人民服务。在参加了2018年至美公益奖项评选并获得了三等奖之后，团队成员互相配合，打造出了这个具有广泛公益价值的系统。
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+  </div>
+  <div class="modal fade" id="team" tabindex="-1" role="dialog" aria-labelledby="teamTitle" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="teamTitle" style="font-size: 24px">
+            PWSE 团队简介
+          </h4>
+        </div>
+        <div class="modal-body" style="font-size: 18px; padding:40px">
+          PWSE团队，由浙江大学计算机科学与技术学院的五位本科同学组成。组长刘尚青，组员为王淼、王田园、高天祥和朱瑞昇（排名不分先后）。
+          <br><br>
+          刘尚青
+          <br>
+          PWSE的发起者，策划者。
+          <br>
+          在项目开发初期，刘先生进行了大量补助金的人工查询，并且对广大人民群众进行了一些调查，确定了PWSE的必要性。
+          在项目启动之后，刘先生对网页的界面进行了设计，即现在主页中的地图显示。在数据方面，刘先生联系了许多献身公益的人士，并获取了大量系统所需的数据。
+          <br><br>
+          高天祥
+          <br>
+          PWSE的数据工程师
+          <br>
+          在项目的开发过程中，高先生访问了大量与公益和补助金相关联的网页，并从这些网页上获取这个系统所需的数据。在获得数据之后，高先生对数据进行了整理并汇总进数据库。
+          维护数据库的同时，可以为项目的模块提供对应的信息。
+          <br><br>
+          朱瑞昇
+          <br>
+          PWSE的后端工程师
+          <br>
+          数据库建立之后，朱先生负责数据库的查询工作。根据用户所选的区域，判断合法性之后进入数据库查询用户所需数据，然后将数据传递到网页进行显示。
+          <br><br>
+          王淼、王田园
+          <br>
+          PWSE的前端工程师
+          <br>
+          两位女士负责网页界面的设计与编写。王淼女士主要负责地图部分的显示与交互，王田园女士主要负责筛选器的制作。两位女士通力合作，打造出了现在呈现在大家眼前美观大方的网页界面。
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+  </div>
+  <div class="modal fade" id="join" tabindex="-1" role="dialog" aria-labelledby="joinTitle" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="joinTitle" style="font-size: 24px">
+            加入我们
+          </h4>
+        </div>
+        <div class="modal-body" style="font-size: 18px; padding:40px">
+          我们欢迎所有热爱公益并愿意为此付出的人们，想要加入我们，请留下个人信息：
+        </div>
+        <div style="padding:40px">
+          <div style="padding-top:4px">
+            <input type="text" class="form-control" placeholder="姓名" style="padding:4px">
+          </div>
+          <div style="padding-top:4px">
+          <input type="text" class="form-control" placeholder="联系方式" style="padding:4px">
+          </div>
+          <div style="padding-top:4px">
+          <input type="text" class="form-control" placeholder="电子邮箱" style="padding:4px">
+          </div>
+          <div style="padding-top:4px">
+          <input type="text" class="form-control" placeholder="个人简介" style="padding:4px">
+          </div>
+        </div>
+        <div style="padding:10px;">
+        <button type="submit" class="btn btn-default" >提交</button>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+  </div>
+  <div class="modal fade" id="suggest" tabindex="-1" role="dialog" aria-labelledby="suggestTitle" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="suggestTitle" style="font-size: 24px">
+            建议
+          </h4>
+        </div>
+        <div class="modal-body" style="font-size: 18px; padding:40px">
+          请为我们提出宝贵的建议：
+        </div>
+        <div style="padding:40px">
+          <div style="padding-top:4px">
+            <input type="text" class="form-control" placeholder="建议" style="padding:4px">
+          </div>
+        </div>
+        <div style="padding:10px;">
+          <button type="submit" class="btn btn-default" >提交</button>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+  </div>
 {% endblock header %}
