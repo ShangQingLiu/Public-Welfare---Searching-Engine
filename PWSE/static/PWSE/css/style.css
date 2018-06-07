@@ -19,3 +19,9 @@ body,html {
     margin: 0;
     font-family: "微软雅黑";
 }
+
+.relative {
+    position: absolute;
+    bottom: 85px;
+    left: 20px;
+}

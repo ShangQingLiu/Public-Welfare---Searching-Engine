@@ -6,22 +6,89 @@
     <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,700,800" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="{% static 'PWSE/js/jquery.min.js' %}"></script>
+    <script src="{% static 'PWSE/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'PWSE/js/materialize.min.js' %}"></script>
     <link rel="stylesheet" href="{% static 'PWSE/css/bootstrap.min.css' %}" type="text/css">
     <link rel="stylesheet" href="{% static 'PWSE/css/style.css' %}" type="text/css">
-
+    <link rel="stylesheet" href="{% static 'PWSE/css/materialize.min.css' %}" type="text/css">
     <script type="text/javascript" src="http://api.map.baidu.com/api?v=3.0&ak=ypNWpxtlppVvarDPkeOzo0jkQVqgsI8e"></script>
+    <script href="{% static 'js/index.js' %}"></script>
     <title>Public Welfare Search Engine</title>
 </head>
 
 <body>
+<div id="container">
+    <ul id="slide-out" class="side-nav">
+        <li>
+            <div id="type_div" style="margin:20px">
+                <label>项目类型</label>
+                <select class="browser-default">
+                    <option value="" disabled selected>扶贫</option>
+                    <option value="1">扶贫</option>
+                    <option value="2">赞助奖金</option>
+                    <option value="3">赞助</option>
+                </select>
+            </div>
+        </li>
+        <li>
+            <div id="means_div" style="margin:20px">
+                <label>补助方式</label>
+                <select class="browser-default">
+                    <option value="" disabled selected>志愿者</option>
+                    <option value="1">志愿者</option>
+                    <option value="2">钱</option>
+                    <option value="3">物资</option>
+                </select>
+            </div>
+        </li>
+        <li>
+            <div id="host_div" style="margin:20px">
+                <label>主办方</label>
+                <select class="browser-default">
+                    <option value="" disabled selected>政府</option>
+                    <option value="1">政府</option>
+                    <option value="2">学校</option>
+                    <option value="3">社区</option>
+                </select>
+            </div>
+        </li>
+        <li>
+            <div id="info_div" style="margin:20px">
+                <label>个人资料</label>
+                <input id="age" placeholder="年龄" type="text" class="validate">
+                <label>性别</label>
+                <select  id="gender" class="browser-default">
+                    <option value="" disabled selected>男</option>
+                    <option value="1">男</option>
+                    <option value="2">女</option>
+                </select>
+                <label>身份</label>
+                <select  id="identity" class="browser-default">
+                    <option value="" disabled selected>学生</option>
+                    <option value="1">学生</option>
+                    <option value="2">老师</option>
+                </select>
+            </div>
+        </li>
+        <li>
+            <div id="certificate_div" style="margin:20px">
+                <label>证件</label>
+                <select  id="certificate" class="browser-default">
+                    <option value="" disabled selected>低保</option>
+                    <option value="1">低保</option>
+                    <option value="2">残疾</option>
+                </select>
+            </div>
+        </li>
+    </ul>
     {% include '_header.html' %}
     
     {% block content %} 
     {% endblock %}
     
     {% include '_footer.html' %}
-    <script src="{% static 'PWSE/js/jquery.min.js' %}"></script>
-    <script src="{% static 'PWSE/js/bootstrap.min.js' %}"></script>
+</div>
 </body>
 
 </html>

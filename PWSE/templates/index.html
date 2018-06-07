@@ -2,11 +2,12 @@
 
 
 {% block content %}
-<div class="map-container">
-    <div id="map-container"></div> 
-</div>
 
-<script type="text/javascript"> 
+<div class="map-container">
+    <div id="map-container"></div>
+</div>
+<a href="#" data-activates="slide-out" class="waves-effect waves-light btn relative"><i class="material-icons">筛选</i></a>
+<script type="text/javascript">
     mapStyleJson = [
         {
             "featureType": "water",
@@ -166,9 +167,16 @@
         getBoundaryAndColor(bmap, city, getFillOpacity(itemCount), getRandomColor(), 0 );
 
     })
-    
-    
-    
+
+    $(document).ready(function() {
+        $('.waves-effect').sideNav({
+                menuWidth: 300,
+                edge: 'right',
+                closeOnClick: true,
+                draggable: true
+            }
+        );
+    });
 </script> 
 
 {% endblock content %}
