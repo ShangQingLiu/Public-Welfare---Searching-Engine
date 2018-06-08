@@ -26,7 +26,7 @@
                 <select class="browser-default">
                     <option value="" disabled selected>扶贫</option>
                     <option value="1">扶贫</option>
-                    <option value="2">赞助奖金</option>
+                    <option value="2">奖助奖金</option>
                     <option value="3">赞助</option>
                 </select>
             </div>
@@ -83,10 +83,22 @@
         </li>
     </ul>
     {% include '_header.html' %}
-    
     {% block content %} 
     {% endblock %}
-    
+    <div class="row info-card" id="info-card">
+        <div class="col-lg-2">
+            <div class="card in-card">
+                <div class="card-content">
+                    <span class="card-title">卡片标题</span>
+                    <p>Data from database</p>
+                </div>
+                <div class="card-action">
+                    <a href="#">反馈</a>
+                    <a href="#">跳转网页</a>
+                </div>
+            </div>
+        </div>
+    </div>
     {% include '_footer.html' %}
 </div>
 </body>

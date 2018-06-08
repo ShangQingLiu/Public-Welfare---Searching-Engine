@@ -6,8 +6,8 @@
 <div class="map-container">
     <div id="map-container"></div>
 </div>
-<a href="#" data-activates="slide-out" class="waves-effect waves-light btn relative"><i class="material-icons">筛选</i></a>
-<a href="#" class="waves-effect waves-light btn relative"><i class="material-icons">意见</i></a>
+<a href="#" id="slide_btn" data-activates="slide-out" class="waves-effect waves-light btn relative"><i class="material-icons">筛选</i></a>
+<a href="#" id="suggestion-btn" class="waves-effect waves-light btn relative-right" onclick="toggleControl()"><i class="material-icons">意见</i></a>
 <script type="text/javascript">
     mapStyleJson = [
         {
@@ -169,14 +169,23 @@
 
     })
 
+    function toggleControl(){
+        if (!$('#info-card').is(':visible')){
+            $('#info-card').show(500);
+        }
+        else{
+            $('#info-card').hide(500);
+        }
+    }
     $(document).ready(function() {
-        $('.waves-effect').sideNav({
+        $('#slide_btn').sideNav({
                 menuWidth: 300,
                 edge: 'right',
                 closeOnClick: true,
                 draggable: true
             }
         );
+        $('#info-card').hide();
     });
 </script> 
 

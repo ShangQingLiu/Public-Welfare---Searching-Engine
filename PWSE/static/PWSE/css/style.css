@@ -25,3 +25,26 @@ body,html {
     bottom: 85px;
     left: 20px;
 }
+
+.relative-right {
+    position: absolute;
+    bottom: 85px;
+    left: 60px;
+}
+
+.info-card{
+    position:absolute;
+    bottom: 50px;
+    left: 130px;
+}
+
+.in-card{
+    width: 500px;
+    height: 200px;
+}
+
+.content{
+    width:300px;
+    height: 100px;
+}
+
