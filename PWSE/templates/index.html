@@ -163,6 +163,45 @@
     }
     var bmap = new BMap.Map('map-container'); 
     initMap(bmap);
+    var navigationControl = new BMap.NavigationControl({
+        // 靠左上角位置
+        anchor: BMAP_ANCHOR_TOP_LEFT,
+        // LARGE类型
+        type: BMAP_NAVIGATION_CONTROL_LARGE,
+        // 启用显示定位
+        enableGeolocation: true
+      });
+      bmap.addControl(navigationControl);
+      // 添加定位控件
+      var geolocationControl = new BMap.GeolocationControl();
+      geolocationControl.addEventListener("locationSuccess", function(e){
+        // 定位成功事件
+        var address = '';
+        address += e.addressComponent.province;
+        address += e.addressComponent.city;
+        address += e.addressComponent.district;
+        address += e.addressComponent.street;
+        address += e.addressComponent.streetNumber;
+        alert("当前定位地址为：" + address);
+      });
+      geolocationControl.addEventListener("locationError",function(e){
+        // 定位失败事件
+        alert(e.message);
+      });
+      bmap.addControl(geolocationControl);
+
+      var size = new BMap.Size(10, 180);
+      bmap.addControl(new BMap.CityListControl({
+          anchor: BMAP_ANCHOR_TOP_RIGHT,
+          // 切换城市之间事件
+          // onChangeBefore: function(){
+          //    alert('before');
+          // },
+          // 切换城市之后事件
+          // onChangeAfter:function(){
+          //   alert('after');
+          // }
+      }));
     cities.forEach((city)=>{
         itemCount = 50;//TODO
         getBoundaryAndColor(bmap, city, getFillOpacity(itemCount), getRandomColor(), 0 );

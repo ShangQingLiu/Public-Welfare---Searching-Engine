@@ -22,14 +22,18 @@ body,html {
 
 .relative {
     position: absolute;
-    bottom: 60px;
-    left: 20px;
+    bottom: 30px;
+    left: 60px;
+    line-height: 32px;
+    height: 32px;
 }
 
 .relative-right {
     position: absolute;
-    bottom: 60px;
-    left: 120px;
+    bottom: 30px;
+    left: 150px;
+    line-height: 32px;
+    height: 32px;
 }
 
 .info-card{
