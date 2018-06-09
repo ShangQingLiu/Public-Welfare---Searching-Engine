@@ -22,14 +22,14 @@ body,html {
 
 .relative {
     position: absolute;
-    bottom: 85px;
+    bottom: 60px;
     left: 20px;
 }
 
 .relative-right {
     position: absolute;
-    bottom: 85px;
-    left: 60px;
+    bottom: 60px;
+    left: 120px;
 }
 
 .info-card{
@@ -48,3 +48,28 @@ body,html {
     height: 100px;
 }
 
+.top-btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.search{
+    color: #666;
+}
